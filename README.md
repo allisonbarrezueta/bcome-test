@@ -17,6 +17,11 @@ To get a local copy of the code, clone the repository using git:
 ```bash
 git clone https://github.com/allisonbarrezueta/bcome-test
 cd bcome-test
+```
+
+### Install and run repository
+
+```bash
 npm install
 npm run dev
 ```
