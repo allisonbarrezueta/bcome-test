@@ -10,12 +10,16 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   { ignores: ["dist"] },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommendedTypeChecked,
+    ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    settings: { react: { version: "18.3" } },
     plugins: {
       react: react,
       "react-hooks": reactHooks,
@@ -23,7 +27,13 @@ export default tseslint.config(
       prettier: prettier,
       "unused-imports": unused,
     },
+    parserOptions: {
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
+      tsconfigRootDir: import.meta.dirname,
+    },
     rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
