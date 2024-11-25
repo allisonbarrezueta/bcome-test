@@ -27,7 +27,7 @@ const Projects = () => {
             header: "Form url",
             accessor: (data) => {
                 return (
-                    <a className="flex text-sm leading-5 text-[#CCAA5B]" href={data.url}>
+                    <a className="flex text-sm leading-5 text-[#CCAA5B]" href={data.url} target="_blank">
                         Data collection form <LinkIcon className="ml-1 size-4" />
                     </a>
                 );
