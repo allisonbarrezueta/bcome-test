@@ -27,7 +27,7 @@ const Projects = () => {
             header: "Form url",
             accessor: (data) => {
                 return (
-                    <a className="flex text-sm leading-5 text-[#CCAA5B]" href={data.url} target="_blank">
+                    <a className="flex text-sm leading-5 text-[#CCAA5B]" href={data.url} target="_blank" rel="noopener noreferrer">
                         Data collection form <LinkIcon className="ml-1 size-4" />
                     </a>
                 );
@@ -63,8 +63,8 @@ const Projects = () => {
 export default Projects;
 
 const projectData: IProject[] = [
-    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
-    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
-    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
-    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
+    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "https://www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
+    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "https://www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
+    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "https://www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
+    { name: "Apparel", total_ref: "68", reference_type: "Apparel", url: "https://www.google.com", status: "Completed", creation_date: "2021-09-01", closing_date: "2021-09-01", archive: "" },
 ];
